@@ -1,0 +1,131 @@
+* {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        overflow: hidden;
+    }
+    section {
+            position: relative;
+            z-index: 10;
+    }
+    canvas {
+            position: relative;
+            z-index: 0;
+    }
+    .mask {
+            position: absolute;
+            width:100%;
+            height: 100%;
+            z-index: 99899;
+            top: 0;
+
+    }
+    
+    /* Style the header */
+    header {
+        background-color: rgb(241, 148, 148);
+        padding: 30px;
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        height: 300px;
+    }
+
+    header h2{
+        text-shadow: 2px 2px #ff0000;
+
+    }
+    
+    /* Container for flexboxes */
+    section {
+        display: -webkit-flex;
+        display: flex;
+    }
+    
+    /* Style the navigation menu */
+    nav {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        background:#ffc0c0;
+        padding: 20px;
+    }
+    
+    /* Style the list inside the menu */
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    /* Style the content */
+    article {
+        -webkit-flex: 3;
+        -ms-flex: 3;
+        flex: 3;
+        background-color: #ffc0c0;
+        padding: 10px;
+    }
+    
+    /* Style the footer */
+    footer {
+        background-color: rgb(241, 148, 148);
+        padding: 10px;
+        text-align: center;
+        color: white;
+    }
+    
+    /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+    @media (max-width: 600px) {
+        section {
+          -webkit-flex-direction: column;
+          flex-direction: column;
+        }
+    }
+
+    #myBtn {
+        margin: 10px 5px;
+        width: 200px;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        background: rgb(241, 148, 148);;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        display: inline-block;
+        }
+        
+        #myBtn:hover {
+        background: rgb(246, 0, 0);
+        color: black;
+        }
+
+        .videoContainer{
+                left: 50%;
+                min-height: 100%;
+                min-width: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+        }
+
+        .image{
+                display: block;
+                margin-left: auto;
+                margin-right: 10px;
+                width: 100%;
+                min-width: 10%;
+                float: right;
+                max-height: 200px;
+        }
+
+        .center {
+                padding-top: 50px;
+                position: absolute;
+                top: 8%;
+                left: 42%;
+                transform: translate(-50%, -50%);
+
+            }
+        
